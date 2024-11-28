@@ -1,0 +1,38 @@
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider">
+            <img src="assets/main/banner.png" alt="banner" id="slideImg">
+        </div>
+        <div class="overlay">
+            <div class="content_title">
+                <h1>Welcome to Movie Library</h1>
+                <button type="button" class="button">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let slideImg = document.getElementById("slideImg");
+        let images = [
+            "assets/main/banner.png",
+            "assets/main/banner1.jpg",
+            "assets/main/banner2.jpg",
+            "assets/main/banner3.jpg"
+        ];
+        let len = images.length;
+        let i = 0;
+
+        function slider() {
+            if (i > len - 1) {
+                i = 0;
+            }
+            slideImg.src = images[i];
+            i++;
+            setTimeout(slider, 3000);
+        }
+    </script>
+</body>
