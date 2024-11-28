@@ -34,5 +34,3 @@ This project is a responsive web application with a modern design that includes:
 - TVMaze API for fetching and displaying data  
 
 ---
-
-## Project Structure
