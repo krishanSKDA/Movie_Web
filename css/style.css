@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,7 @@ body {
     padding: 20px;
 }
 
-
+/* Navigation Styles */
 nav {
     background-color: #0F0F0F;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -21,6 +20,7 @@ nav {
     top: 0;
     z-index: 1000;
 }
+
 nav a.active {
     color: yellow;
 }
@@ -83,14 +83,17 @@ nav li:first-child {
     padding: 0.5rem 0;
 }
 
-
 .menu-button {
     display: none;
     cursor: pointer;
 }
 
-
+/* Responsive Adjustments */
 @media (max-width: 800px) {
+    nav ul {
+        justify-content: space-between;
+    }
+
     .hideOnMobile {
         display: none;
     }
@@ -111,18 +114,16 @@ nav li:first-child {
     }
 }
 
-
 /* Footer Styles */
-
 .footer {
     background-color: #0F0F0F;
     color: #ffffff;
     padding: 2rem 0.5rem;
 }
-.menu-button svg , .hide-menu svg {
+
+.menu-button svg, .hide-menu svg {
     fill: white;
-  }
-  
+}
 
 .footer-content {
     max-width: 1200px;
@@ -199,6 +200,7 @@ nav li:first-child {
     text-decoration: underline;
 }
 
+/* Tablet Adjustments */
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
@@ -213,5 +215,25 @@ nav li:first-child {
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+    .footer-content {
+        gap: 1rem;
+    }
+
+    .footer-left h3 {
+        font-size: 1rem;
+    }
+
+    .footer-left p,
+    .follow-text {
+        font-size: 0.8rem;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
     }
 }
